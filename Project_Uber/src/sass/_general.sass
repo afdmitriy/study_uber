@@ -8,6 +8,7 @@ nav
   height: 50px
   background-color: #212121
   z-index: 3
+  
 
 .menu
   display: flex
@@ -27,6 +28,8 @@ nav
     padding-right: 28px
     &:last-child
       border-right: none
+.hamburger
+  display: none     
 
 .subheader
   position: absolute
@@ -79,6 +82,7 @@ nav
     font-weight: 400
     text-transform: uppercase
     +btn_hover
+   
     
 
 .promo
@@ -169,7 +173,7 @@ nav
   z-index: 2  
 
 .reasons
-  padding: 71px 0 65px 0
+  padding: 20px 0 65px 0
   &_block
     display: flex
     justify-content: center
@@ -302,8 +306,6 @@ nav
   padding: 68px 0 80px
   &_block
     margin-top: 25px
-    .margin_top
-      margin-top: 54px
     &_descr
       font-size: 17px
       font-weight: 300
@@ -322,8 +324,7 @@ nav
       font-size: 17px
       font-weight: 300
       color: #222222
-      line-height: 32px
-      
+      line-height: 32px  
       &:before
         content: ''
         display: block
@@ -376,67 +377,71 @@ nav
     background-color: #080810
     z-index: -1
 
-footer
-  padding-top: 14px
-  position: relative
-  min-height: 148px
-  .footer_divider
-    width: 300px
-    height: 4px
-    background-color: $blue
-    margin: 0 auto 12px
-  .footer_link
-    margin: 16px auto 0
-    display: flex
-    justify-content: space-between
-    
-    &_site  
+footer 
+  padding: 14px 23px 39px
+  a 
+    &:hover 
       text-decoration: none
-      font-size: 15px
-      font-weight: 300
-      text-transform: uppercase
-      color: #070716
-      
-    &_sub    
-      font-size: 11px
-      font-weight: 300
-      text-transform: uppercase
-      color: #999999
-  .footer_russian
-    position: absolute
-    left: 50%
-    transform: translateX(-50%)
-    font-size: 11px
-    font-weight: 400
-    text-transform: uppercase
-    color: $blue
-    margin-top: 18px
-    
-  .footer_link_social
-    position: absolute
-    left: 22px
-    top: 45%
-    transform: translateY(-50%)
+.footer
+  &_divider
+    width: 299px
+    height: 4px
+    background-color: #1fbad6
+    margin: 0 auto
+  &_wrapper
+    display: flex 
+    justify-content: space-between
+    align-items: flex-start
+    padding-top: 32px
+  &_wrapper > div 
+    width: 33%
+    &:nth-child(3)
+      display: flex 
+      justify-content: flex-end
+  &_social
+    width: 160px
     display: flex
     justify-content: space-between
-    width: 154px
-    &_item
-      margin: 16px auto 0
-      display: flex
+    &_item 
+      display: flex 
       justify-content: center
       align-items: center
+      margin: 0 4px 
       width: 32px
       height: 32px
       background-color: #070716
       border-radius: 100%
-      i
+      i 
         color: #fff
-
-  .footer_link_mobile
-    position: absolute
-    right: 22px
-    top: 45%
-    transform: translateY(-50%)
-    display: flex
-    justify-content: space-between
-    width: 296px  
+  &_links
+    width: 390px
+    margin: 0 auto
+    &_main 
+      display: flex 
+      justify-content: space-between
+      padding: 0 10px
+      a 
+        color: #070716
+        font-size: 15px
+        font-weight: 300
+        text-transform: uppercase
+    &_sub 
+      display: flex 
+      justify-content: space-between
+      margin-top: 10px
+      a 
+        color: #999999
+        font-size: 11px
+        font-weight: 300
+        text-transform: uppercase
+    &_lang 
+      display: block 
+      margin: 0 auto
+      color: #1fbad6
+      font-size: 11px
+      font-weight: 400
+      margin-top: 19px
+      text-transform: uppercase
+      text-align: center
+.xs-visible
+      display: none      
